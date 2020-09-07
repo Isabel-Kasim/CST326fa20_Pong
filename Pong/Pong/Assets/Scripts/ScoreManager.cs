@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI lscoreText;
     public TextMeshProUGUI rscoreText;
+    public GameObject LeftText;
     public Ball gameball;
     
     // Start is called before the first frame update
@@ -20,8 +21,7 @@ public class ScoreManager : MonoBehaviour
     
     public void AddScore(float leftscore, float rightscore)
     {
-        lscoreText.text = leftscore.ToString();
-        rscoreText.text = rightscore.ToString();
+        
     }
     
 
