@@ -7,8 +7,8 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI lscoreText;
     public TextMeshProUGUI rscoreText;
-    public GameObject LeftText;
     public Ball gameball;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -19,10 +19,22 @@ public class ScoreManager : MonoBehaviour
     }
 
     
-    public void AddScore(float leftscore, float rightscore)
+    public void AddScore(int leftscore, int rightscore)
     {
-        
+        lscoreText.color = newColor();
+        rscoreText.color = newColor();
+        lscoreText.text = leftscore.ToString();
+        rscoreText.text = rightscore.ToString();
     }
     
+    public void winner ()
+    {
+        Time.timeScale = 0;
+    }
 
+    Color newColor()
+    {
+        Color color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
+        return color;
+    }
 }

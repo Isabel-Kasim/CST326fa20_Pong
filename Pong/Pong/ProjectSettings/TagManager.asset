@@ -11,6 +11,7 @@ TagManager:
   - Ball
   - UpperWall
   - LowerWall
+  - PowerUp
   layers:
   - Default
   - TransparentFX
